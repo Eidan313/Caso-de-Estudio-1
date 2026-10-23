@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f3f6fa;
+  color: #263238;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.encabezado {
+  padding: 28px 20px;
+  background-color: #245b8f;
+  color: white;
+  text-align: center;
+}
+
+.encabezado h1,
+.encabezado p,
+footer p {
+  margin: 0;
+}
+
+.encabezado p {
+  margin-top: 6px;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 900px;
+  margin: 28px auto;
+}
+
+.panel {
+  margin-bottom: 22px;
+  padding: 24px;
+  border: 1px solid #d5dee8;
+  border-radius: 8px;
+  background-color: white;
+}
+
+h2 {
+  margin: 0 0 18px;
+  color: #245b8f;
+  font-size: 1.35rem;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 12px 16px;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #abb8c5;
+  border-radius: 5px;
+  font: inherit;
+}
+
+input:focus {
+  outline: 2px solid #9bb9d5;
+}
+
+button {
+  margin-top: 18px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #245b8f;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:hover {
+  background-color: #173f65;
+}
+
+.mensaje-error {
+  margin: 14px 0 0;
+  color: #b42318;
+}
+
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #cbd5df;
+  text-align: left;
+}
+
+th {
+  background-color: #e8eff6;
+}
+
+tbody tr:hover {
+  background-color: #f4f8fc;
+}
+
+.nota-verde {
+  background-color: #d8f3dc;
+  color: #176b32;
+  font-weight: bold;
+}
+
+.nota-roja {
+  background-color: #fde2e1;
+  color: #a12622;
+  font-weight: bold;
+}
+
+.resumen {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: #f3f6fa;
+}
+
+.resumen h2 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.resumen p {
+  margin: 5px 0;
+}
+
+footer {
+  padding: 14px;
+  color: #607080;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .panel {
+    padding: 18px;
+  }
+
+  .campos {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}

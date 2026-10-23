@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de estudiantes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <h1>Registro de estudiantes</h1>
+    <p>Agrega estudiantes y consulta sus notas.</p>
+  </header>
+
+  <main class="contenedor">
+    <section class="panel" aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Agregar estudiante</h2>
+      <form id="formulario-estudiante" novalidate>
+        <div class="campos">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="given-name">
+
+          <label for="apellidos">Apellidos</label>
+          <input id="apellidos" name="apellidos" type="text" autocomplete="family-name">
+
+          <label for="nota">Nota</label>
+          <input id="nota" name="nota" type="number" min="0" max="100" step="any">
+        </div>
+        <p id="mensaje-error" class="mensaje-error" role="alert" hidden></p>
+        <button type="submit">Agregar estudiante</button>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="titulo-lista">
+      <h2 id="titulo-lista">Lista de estudiantes</h2>
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">Nota</th>
+            </tr>
+          </thead>
+          <tbody id="lista-estudiantes"></tbody>
+        </table>
+      </div>
+
+      <section class="resumen" aria-labelledby="titulo-resumen">
+        <h2 id="titulo-resumen">Resumen de notas</h2>
+        <p><strong>Nota más alta:</strong> <span id="nota-mayor"></span></p>
+        <p><strong>Promedio:</strong> <span id="promedio"></span></p>
+        <p><strong>Nota más baja:</strong> <span id="nota-menor"></span></p>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>Registro de estudiantes</p>
+  </footer>
+</body>
+</html>
